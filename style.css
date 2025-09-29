@@ -1,10 +1,11 @@
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #333333;
     background-color: #f4f4f4;
     display: flex;
@@ -12,29 +13,35 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 #header {
     background-color: #2c3e50;
     color: white;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     width: 100%;
+    box-sizing: border-box;
 }
 
 .logo-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     margin-bottom: 15px;
     text-align: center;
+    width: 100%;
 }
 
 .logo {
@@ -43,6 +50,7 @@ body {
     border-radius: 50%;
     background-color: #ffffff;
     border: 2px solid white;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -50,13 +58,15 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
 }
 
 .site-title {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     margin: 0;
+    word-wrap: break-word;
 }
 
 .main-nav {
@@ -70,32 +80,37 @@ body {
     color: white;
     text-decoration: none;
     padding: 12px 15px;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     font-weight: bold;
     text-align: center;
     background-color: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
     background-color: rgba(255,255,255,0.2);
-    transform: translateY(-1px);
 }
 
 main {
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: white;
     flex: 1;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .main-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
 }
+
 
 #table {
     order: 1;
@@ -110,11 +125,13 @@ main {
 }
 
 section {
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -124,12 +141,14 @@ h2 {
     margin-bottom: 15px;
     font-size: 1.3em;
     font-weight: bold;
+    word-wrap: break-word;
 }
 
 .links-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .links-list li {
@@ -137,6 +156,9 @@ h2 {
     padding: 12px;
     border-radius: 6px;
     transition: all 0.3s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
 }
 
 .links-list li:nth-child(odd) {
@@ -149,7 +171,6 @@ h2 {
 
 .links-list li:hover {
     background-color: #dee2e6;
-    transform: translateX(3px);
 }
 
 .links-list a {
@@ -157,6 +178,7 @@ h2 {
     text-decoration: none;
     font-weight: 500;
     display: block;
+    word-wrap: break-word;
 }
 
 .links-list a:hover,
@@ -164,12 +186,48 @@ h2 {
     color: #e74c3c;
 }
 
+.image-link img,
+.image-map img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.image-link {
+    text-align: center;
+}
+
+.image-map {
+    text-align: center;
+    overflow: hidden;
+}
+
+.numbered-links {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.numbered-links li {
+    margin: 5px 0;
+    background: none !important;
+    padding: 5px !important;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
+}
+
 .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    font-size: 0.9em;
+    margin: 0;
+    font-size: 0.85em;
+    min-width: 300px;
 }
 
 .data-table th {
@@ -178,13 +236,13 @@ h2 {
     padding: 10px 8px;
     text-align: left;
     font-weight: bold;
-    font-size: 0.9em;
+    white-space: nowrap;
 }
 
 .data-table td {
     padding: 8px;
     border-bottom: 1px solid #dddddd;
-    font-size: 0.85em;
+    word-wrap: break-word;
 }
 
 .data-table tbody tr:nth-child(odd) {
@@ -203,6 +261,7 @@ h2 {
     font-weight: bold;
     margin-bottom: 8px;
     font-size: 1em;
+    text-align: left;
 }
 
 #form {
@@ -211,7 +270,8 @@ h2 {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .form-group label {
@@ -219,6 +279,7 @@ h2 {
     margin-bottom: 6px;
     font-weight: bold;
     font-size: 0.95em;
+    word-wrap: break-word;
 }
 
 .form-group input[type="text"],
@@ -233,22 +294,35 @@ h2 {
     border-radius: 4px;
     font-size: 16px;
     font-family: inherit;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group select[multiple] {
+    height: auto;
+    min-height: 120px;
 }
 
 .radio-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     margin-top: 5px;
 }
 
 .checkbox-label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     font-weight: normal;
     cursor: pointer;
     font-size: 0.95em;
+    word-wrap: break-word;
 }
 
 button[type="submit"] {
@@ -263,6 +337,8 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
     font-family: inherit;
     width: 100%;
+    box-sizing: border-box;
+    display: block;
 }
 
 button[type="submit"]:hover,
@@ -277,6 +353,7 @@ button[type="submit"]:focus {
     padding: 20px 0;
     margin-top: auto;
     width: 100%;
+    box-sizing: border-box;
 }
 
 #footer p {
@@ -303,6 +380,8 @@ fieldset {
     border-radius: 6px;
     padding: 12px;
     margin: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 legend {
@@ -327,11 +406,6 @@ textarea:focus {
     button[type="submit"] {
         transition: none;
     }
-    
-    .main-nav a:hover,
-    .links-list li:hover {
-        transform: none;
-    }
 }
 
 @media screen and (min-width: 768px) {
@@ -348,28 +422,29 @@ textarea:focus {
     }
     
     .site-title {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     
     .main-nav {
         flex-direction: row;
-        gap: 15px;
+        gap: 10px;
         justify-content: center;
     }
     
     .main-nav a {
-        padding: 10px 20px;
-        border-radius: 25px;
+        padding: 10px 15px;
+        border-radius: 20px;
         background-color: transparent;
         border: none;
+        width: auto;
     }
     
     main {
-        padding: 30px 0;
+        padding: 25px 0;
     }
     
     .main-content {
-        gap: 30px;
+        gap: 25px;
     }
     
     #table {
@@ -385,33 +460,38 @@ textarea:focus {
     }
     
     section {
-        padding: 25px;
-        margin-bottom: 30px;
+        padding: 20px;
+        margin-bottom: 25px;
     }
     
     h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     
     .data-table {
-        font-size: 1em;
+        font-size: 0.9em;
     }
     
     .data-table th,
     .data-table td {
-        padding: 12px 15px;
-        font-size: 1em;
+        padding: 10px 12px;
     }
     
     .radio-group {
         flex-direction: row;
-        gap: 20px;
+        gap: 15px;
     }
     
     button[type="submit"] {
         width: auto;
+        display: inline-block;
+    }
+    
+    .form-group select[multiple] {
+        height: 120px;
     }
 }
+
 
 @media screen and (min-width: 992px) {
     .container {
@@ -419,13 +499,12 @@ textarea:focus {
     }
     
     #header {
-        background-color: #2c3e50;
         background-image: linear-gradient(135deg, #2c3e50, #3498db);
         padding: 20px 0;
     }
     
     .logo-title {
-        gap: 200px;
+        gap: 150px;
         margin-bottom: 15px;
     }
     
@@ -436,25 +515,27 @@ textarea:focus {
     }
     
     .site-title {
-        font-size: 2.5em;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        font-size: 2.2em;
     }
     
     .main-nav {
-        gap: 30px;
+        gap: 20px;
     }
     
     main {
-        padding: 40px 0;
+        padding: 30px 0;
     }
     
     section {
-        padding: 30px;
-        margin-bottom: 50px;
-        box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        padding: 25px;
+        margin-bottom: 30px;
     }
     
     .main-content {
-        gap: 40px;
+        gap: 30px;
+    }
+    
+    .data-table {
+        font-size: 1em;
     }
 }
