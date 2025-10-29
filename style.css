@@ -36,6 +36,7 @@ body {
     min-height: 140px;
 }
 
+
 .logo-title-absolute {
     display: none;
     position: absolute;
@@ -57,6 +58,7 @@ body {
     gap: 15px;
     z-index: 1000;
 }
+
 
 .header-mobile {
     display: block;
@@ -397,6 +399,28 @@ button[type="submit"]:focus {
     margin-top: auto;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    min-height: 80px;
+}
+
+/* Стили для абсолютно позиционированного подвала */
+.footer-absolute {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.footer-absolute p {
+    color: white;
+    font-size: 1em;
+    margin: 0;
+}
+
+.footer-mobile {
+    display: block;
 }
 
 #footer p {
@@ -470,12 +494,20 @@ textarea:focus {
     }
     
     .logo-title-absolute .logo {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
     
     .logo-title-absolute .site-title {
         font-size: 1.6em;
+    }
+    
+    .footer-mobile {
+        display: none;
+    }
+    
+    .footer-absolute {
+        display: block;
     }
     
     main {
@@ -538,12 +570,12 @@ textarea:focus {
     
     #header {
         background-image: linear-gradient(135deg, #2c3e50, #3498db);
-        padding: 20px 0;
+        padding: 25px 0;
     }
     
     .logo-title-absolute .logo {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
     
     .logo-title-absolute .site-title {
@@ -581,9 +613,13 @@ textarea:focus {
         right: 40px;
     }
     
+    .footer-absolute {
+        left: 40px;
+    }
+    
     .logo-title-absolute .logo {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
     
     .logo-title-absolute .site-title {
