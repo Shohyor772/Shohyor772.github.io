@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // ← ОДИН импорт React с useState
+import React, { useState } from 'react'; 
 import {
   Layout,
   Menu,
@@ -17,27 +17,26 @@ import {
   Space,
   Divider,
   Image
-} from 'antd'
+} from 'antd';
 import {
   LinkOutlined,
   TableOutlined,
   FormOutlined,
   ContactsOutlined
-} from '@ant-design/icons'
+} from '@ant-design/icons';
 
-// Импорты изображений - лучше перенести после библиотек
-import logo from './images/logo.png'
+import logo from './images/logo.png';
 import kubguImage from './images/image.jpg';
 import mapImage from './images/image.jpg';
 
-const { Header, Content, Footer } = Layout
-const { Title, Text, Paragraph } = Typography
-const { Option } = Select
-const { TextArea } = Input
+const { Header, Content, Footer } = Layout;
+const { Title, Text, Paragraph } = Typography;
+const { Option } = Select;
+const { TextArea } = Input;
 
 const App = () => {
-  const [form] = Form.useForm()
-  const [currentSection, setCurrentSection] = useState('links')
+  const [form] = Form.useForm();
+  const [currentSection, setCurrentSection] = useState('links');
 
   const tableData = [
     {
@@ -82,7 +81,7 @@ const App = () => {
       type: 'SEO',
       status: 'Активна'
     }
-  ]
+  ];
 
   const tableColumns = [
     {
@@ -105,43 +104,43 @@ const App = () => {
       dataIndex: 'status',
       key: 'status'
     }
-  ]
+  ];
 
   const menuItems = [
     {
       key: 'links',
-      icon: <LinkOutlined />,
+      icon: React.createElement(LinkOutlined),
       label: 'Ссылки'
     },
     {
       key: 'table',
-      icon: <TableOutlined />,
+      icon: React.createElement(TableOutlined),
       label: 'Таблица'
     },
     {
       key: 'form',
-      icon: <FormOutlined />,
+      icon: React.createElement(FormOutlined),
       label: 'Форма'
     },
     {
       key: 'contacts',
-      icon: <ContactsOutlined />,
+      icon: React.createElement(ContactsOutlined),
       label: 'Контакты'
     }
-  ]
+  ];
 
   const handleMenuClick = ({ key }) => {
-    setCurrentSection(key)
-    const element = document.getElementById(key)
+    setCurrentSection(key);
+    const element = document.getElementById(key);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   const onFinish = (values) => {
-    console.log('Form values:', values)
-    alert('Форма успешно отправлена!')
-  }
+    console.log('Form values:', values);
+    alert('Форма успешно отправлена!');
+  };
 
   return (
     <Layout className="site-layout">
@@ -150,7 +149,15 @@ const App = () => {
           <Col xs={24} sm={12}>
             <div className="logo-container">
               <div className="logo">
-                <img src={logo} alt="Логотип сайта" style={{width: '100%', height: '100%', borderRadius: '50%'}}/>
+                <img 
+                  src={logo} 
+                  alt="Логотип сайта" 
+                  style={{
+                    width: '100%', 
+                    height: '100%', 
+                    borderRadius: '50%'
+                  }}
+                />
               </div>
               <Title level={4} style={{ color: 'white', margin: 0 }}>
                 Сайт с ссылочками
@@ -190,7 +197,6 @@ const App = () => {
               className="links-section"
             >
               <Space direction="vertical" style={{ width: '100%' }} size="middle">
-                {/* Все ссылки в одном столбце */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <a href="http://kubsu.ru" target="_blank" rel="noopener noreferrer">
                     КубГУ (HTTP)
@@ -212,25 +218,23 @@ const App = () => {
 
                 <Divider />
 
-                  <div style={{ textAlign: 'center' }}>
-                    <a href="https://kubsu.ru" target="_blank" rel="noopener noreferrer">
-                      <Image
-                        src={kubguImage}
-                        alt="Логотип КубГУ"
-                        preview={false}
-                        style={{ 
-                          borderRadius: '8px', 
-                          maxWidth: '300px', // ограничиваем максимальную ширину
-                          width: '100%',     // адаптивная ширина
-                          height: 'auto'     // сохраняем пропорции
-                        }}
-                      />
-                    </a>
-                  </div>
+                <div style={{ textAlign: 'center' }}>
+                  <a href="https://kubsu.ru" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={kubguImage}
+                      alt="Логотип КубГУ"
+                      preview={false}
+                      width={250}
+                      height={150}
+                      style={{ 
+                        borderRadius: '8px'
+                      }}
+                    />
+                  </a>
+                </div>
 
                 <Divider />
 
-                {/* Продолжение ссылок в столбик */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <a href="https://kubsu.ru?id=12345" target="_blank" rel="noopener noreferrer">
                     КубГУ по id
@@ -244,7 +248,6 @@ const App = () => {
 
                 <Divider />
 
-                {/* Текст со ссылкой */}
                 <Paragraph>
                   Просто текст, а далее - ссылка:{' '}
                   <a href="https://kubsu.ru" target="_blank" rel="noopener noreferrer">
@@ -254,7 +257,6 @@ const App = () => {
 
                 <Divider />
 
-                {/* Нумерованный список */}
                 <div>
                   <Title level={5}>Нумерованный список ссылок:</Title>
                   <ol className="numbered-links">
@@ -293,7 +295,6 @@ const App = () => {
 
                 <Divider />
 
-                {/* Специальные ссылки в столбик */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   <span style={{ color: '#a0aec0' }}>Ссылка без href</span>
                   <a 
@@ -313,7 +314,6 @@ const App = () => {
                     Запрет для индексации
                   </a>
                   
-                  {/* Интерактивное изображение */}
                   <div style={{ textAlign: 'center', padding: '20px 0' }}>
                     <div style={{ position: 'relative', display: 'inline-block' }}>
                       <Image 
@@ -513,16 +513,16 @@ const App = () => {
       <Footer id="contacts" className="footer">
         <div style={{ 
           textAlign: 'left', 
-          padding: '0 0px',
+          padding: '0 24px',
           width: '100%',
-          maxWidth: '1980px',
+          maxWidth: '1900px',
           margin: '0 auto'
         }}>
           <Text style={{ color: 'white' }}>© Владимир 2025</Text>
         </div>
       </Footer>
     </Layout>
-  )
-}
+  );
+};
 
-export default App
+export default App;
