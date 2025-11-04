@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .calculator {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: none;
+        }
+        .error {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <div class="form-group">
+            <label for="quantity">Количество товара:</label>
+            <input type="number" id="quantity" min="1" value="1">
+            <div id="quantity-error" class="error">Пожалуйста, введите корректное количество</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="product">Выберите товар:</label>
+            <select id="product">
+                <option value="1000">Смартфон - 1000 руб.</option>
+                <option value="500">Наушники - 500 руб.</option>
+                <option value="200">Чехол для телефона - 200 руб.</option>
+            </select>
+        </div>
+        
+        <button id="calculate">Рассчитать стоимость</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = document.getElementById('quantity');
+            const productSelect = document.getElementById('product');
+            const calculateButton = document.getElementById('calculate');
+            const resultDiv = document.getElementById('result');
+            const quantityError = document.getElementById('quantity-error');
+            
+            calculateButton.addEventListener('click', function() {
+
+                quantityError.style.display = 'none';
+                quantityInput.style.borderColor = '#ddd';
+                
+                const quantity = parseInt(quantityInput.value);
+                const price = parseInt(productSelect.value);
+                
+                let isValid = true;
+                
+                if (isNaN(quantity) || quantity < 1) {
+                    quantityError.style.display = 'block';
+                    quantityInput.style.borderColor = '#d32f2f';
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    return;
+                }
+                
+                const totalCost = quantity * price;
+                
+                resultDiv.textContent = `Стоимость заказа: ${totalCost} руб.`;
+                resultDiv.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
