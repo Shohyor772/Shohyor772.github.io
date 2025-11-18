@@ -82,28 +82,44 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDiv.style.display = 'none';
     }
     
-    feedbackForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        if (!document.getElementById('consent').checked) {
-            showMessage('Необходимо согласие с политикой обработки персональных данных', false);
-            return;
+feedbackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    if (!document.getElementById('consent').checked) {
+        showMessage('Необходимо согласие с политикой обработки персональных данных', false);
+        return;
+    }
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправка...';
+    
+    const formData = new FormData(feedbackForm);
+    
+    fetch(feedbackForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
         }
-        
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Отправка...';
-        
-        const formData = new FormData(feedbackForm);
-        const data = Object.fromEntries(formData.entries());
-        
-        setTimeout(() => {
+    })
+    .then(response => {
+        if (response.ok) {
             showMessage('Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.', true);
             feedbackForm.reset();
             clearFormData();
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Отправить';
-        }, 1000);
+        } else {
+            showMessage('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.', false);
+        }
+    })
+    .catch(error => {
+        console.error('Ошибка:', error);
+        showMessage('Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.', false);
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Отправить';
     });
+});
     
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && popup.style.display === 'block') {

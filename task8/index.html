@@ -22,10 +22,17 @@
         
         <div class="message" id="message"></div>
         
-        <form id="feedbackForm">
+        <form id="feedbackForm" action="https://getform.io/f/akkpodwa" method="POST">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Новая заявка с сайта">
+            <input type="hidden" name="_autoresponse" value="Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.">
+            <input type="hidden" name="_next" value="https://yourdomain.com/success.html">
+            
             <div class="form-group">
                 <label for="fullName">ФИО *</label>
-                <input type="text" id="fullName" name="fullName" required>
+                <input type="text" id="fullName" name="name" required>
             </div>
             
             <div class="form-group">
@@ -45,15 +52,17 @@
             
             <div class="form-group">
                 <label for="messageText">Сообщение *</label>
-                <textarea id="messageText" name="messageText" required></textarea>
+                <textarea id="messageText" name="message" required></textarea>
             </div>
             
             <div class="checkbox-group">
                 <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">Я согласен с <a href="#" target="_blank">политикой обработки персональных данных</a> *</label>
+                <label for="consent">Я согласен с политикой обработки персональных данных *</label>
             </div>
             
             <button type="submit" class="submit-btn" id="submitBtn">Отправить</button>
+            <input type="hidden" name="_replyto" value="vladimir.petrichenko2288@gmail.com">
+            <input type="hidden" name="_forward" value="vladimir.petrichenko2288@gmail.com">
         </form>
     </div>
 
