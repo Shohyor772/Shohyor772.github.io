@@ -6,28 +6,27 @@
     <title>Мой сайт с ссылками и формой</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
     <header class="bg-dark text-white position-relative" style="min-height: 140px;">
         <!-- Логотип и заголовок - абсолютно слева -->
-        <div class="logo-title-absolute position-absolute start-0 top-50 translate-middle-y ms-4">
+        <div class="logo-title-absolute position-absolute start-0 top-50 translate-middle-y ms-4" style="display: none;">
             <div class="d-flex align-items-center">
                 <div class="logo me-3">
-                    <img src="Images/Logo.png" alt="Логотип сайта" class="rounded-circle">
+                    <img src="Images/Logo.png" alt="Логотип сайта" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
                 </div>
                 <h1 class="site-title h4 mb-0 text-nowrap">Сайт с ссылочками</h1>
             </div>
         </div>
 
         <!-- Навигация - абсолютно справа -->
-        <nav class="main-nav-absolute position-absolute end-0 top-50 translate-middle-y me-4">
+        <nav class="main-nav-absolute position-absolute end-0 top-50 translate-middle-y me-4" style="display: none;">
             <div class="d-flex gap-2">
-                <a href="#links" class="btn btn-outline-light btn-sm">Ссылки</a>
-                <a href="#table" class="btn btn-outline-light btn-sm">Таблица</a>
-                <a href="#form" class="btn btn-outline-light btn-sm">Форма</a>
-                <a href="#footer" class="btn btn-outline-light btn-sm">Контакты</a>
+                <a href="#links" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Ссылки</a>
+                <a href="#table" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Таблица</a>
+                <a href="#form" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Форма</a>
+                <a href="#footer" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Контакты</a>
             </div>
         </nav>
 
@@ -36,16 +35,16 @@
             <div class="header-mobile py-3">
                 <div class="logo-title text-center mb-3">
                     <div class="logo mx-auto mb-2">
-                        <img src="Images/Logo.png" alt="Логотип сайта" class="rounded-circle">
+                        <img src="Images/Logo.png" alt="Логотип сайта" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
                     </div>
                     <h1 class="site-title h4 mb-0">Сайт с ссылочками</h1>
                 </div>
                 <nav class="main-nav">
                     <div class="d-flex flex-column gap-2">
-                        <a href="#links" class="btn btn-outline-light btn-sm">Ссылки</a>
-                        <a href="#table" class="btn btn-outline-light btn-sm">Таблица</a>
-                        <a href="#form" class="btn btn-outline-light btn-sm">Форма</a>
-                        <a href="#footer" class="btn btn-outline-light btn-sm">Контакты</a>
+                        <a href="#links" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Ссылки</a>
+                        <a href="#table" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Таблица</a>
+                        <a href="#form" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Форма</a>
+                        <a href="#footer" class="btn btn-outline-light btn-sm" style="transition: all 0.15s ease-in-out;">Контакты</a>
                     </div>
                 </nav>
             </div>
@@ -57,63 +56,63 @@
         <div class="row g-4">
             <!-- Ссылки -->
             <section id="links" class="col-12 col-lg-6 order-1 order-lg-0">
-                <div class="card h-100">
+                <div class="card h-100" style="box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border: 1px solid rgba(0, 0, 0, 0.125); transition: all 0.15s ease-in-out;">
                     <div class="card-body">
                         <h2 class="card-title h5 border-bottom pb-2">Требуемые гиперссылки</h2>
-                        <ul class="list-unstyled">
-                            <li class="mb-2 p-2 bg-light rounded"><a href="http://kubsu.ru" target="_blank" rel="noopener">КубГУ (HTTP)</a></li>
-                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="https://kubsu.ru" target="_blank" rel="noopener">КубГУ (HTTPS)</a></li>
+                        <ul class="list-unstyled links-list">
+                            <li class="mb-2 p-2 bg-light rounded"><a href="http://kubsu.ru" target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">КубГУ (HTTP)</a></li>
+                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="https://kubsu.ru" target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">КубГУ (HTTPS)</a></li>
                             <li class="mb-2 text-center">
                                 <a href="https://kubsu.ru" target="_blank" rel="noopener">
-                                    <img src="Images/image.jpg" alt="Логотип КубГУ" class="img-fluid rounded">
+                                    <img src="Images/image.jpg" alt="Логотип КубГУ" class="img-fluid rounded" style="max-width: 100%; height: auto;">
                                 </a>
                             </li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="about.html">Внутренняя страница</a></li>
-                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="index.html">Ссылка на главную страницу</a></li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="#form">Фрагмент текущей страницы</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="about.html" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Внутренняя страница</a></li>
+                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="index.html" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Ссылка на главную страницу</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="#form" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Фрагмент текущей страницы</a></li>
                             <li class="mb-2 p-2 bg-body-secondary rounded">
-                                <a href="https://www.google.com/search?q=КубГУ+Краснодар&amp;num=5&amp;hl=ru" target="_blank" rel="noopener">
+                                <a href="https://www.google.com/search?q=КубГУ+Краснодар&amp;num=5&amp;hl=ru" target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">
                                     Поиск КубГУ с 3 параметрами
                                 </a>
                             </li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="https://kubsu.ru?id=12345" target="_blank" rel="noopener">КубГУ по id</a></li>
-                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="fileInFile.html">Файл в текущем каталоге</a></li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="about/forCatalog.html">Каталог в about</a></li>
-                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="../about.html">Уровень выше</a></li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="../../about.html">Уровень на два уровня выше</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="https://kubsu.ru?id=12345" target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">КубГУ по id</a></li>
+                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="fileInFile.html" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Файл в текущем каталоге</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="about/forCatalog.html" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Каталог в about</a></li>
+                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="../about.html" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Уровень выше</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="../../about.html" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Уровень на два уровня выше</a></li>
                             <li class="mb-2 p-2 bg-body-secondary rounded">
                                 <p class="mb-1">Просто текст, а далее - ссылка:</p>
-                                <a href="https://kubsu.ru" target="_blank" rel="noopener">Кубанский государственный университет</a>
+                                <a href="https://kubsu.ru" target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Кубанский государственный университет</a>
                             </li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="https://kubsu.ru/ru/university/departments" target="_blank" rel="noopener">Факультеты</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="https://kubsu.ru/ru/university/departments" target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Факультеты</a></li>
                             
                             <li class="mb-2 text-center">
-                                <img src="Images/image.jpg" alt="Изображение с кликабельными зонами" usemap="#image-map" class="img-fluid rounded">
+                                <img src="Images/image.jpg" alt="Изображение с кликабельными зонами" usemap="#image-map" class="img-fluid rounded" style="max-width: 100%; height: auto;">
                                 <map name="image-map">
                                     <area shape="rect" coords="0,0,150,150" href="https://kubsu.ru" target="_blank" alt="КубГУ">
                                     <area shape="circle" coords="225,75,50" href="https://google.com" target="_blank" alt="Google">
                                 </map>
                             </li>
 
-                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="#void">Пустой href</a></li>
+                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="#void" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Пустой href</a></li>
                             <li class="mb-2 p-2 bg-light rounded"><span class="text-muted">Ссылка без href</span></li>
-                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="https://kubsu.ru" rel="nofollow" target="_blank" class="text-muted">Запрет на переход поисковикам</a></li>
-                            <li class="mb-2 p-2 bg-light rounded"><a href="https://kubsu.ru" rel="noindex" target="_blank" class="text-muted fst-italic">Запрет для индексации</a></li>
+                            <li class="mb-2 p-2 bg-body-secondary rounded"><a href="https://kubsu.ru" rel="nofollow" target="_blank" class="text-muted" style="font-style: italic; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Запрет на переход поисковикам</a></li>
+                            <li class="mb-2 p-2 bg-light rounded"><a href="https://kubsu.ru" rel="noindex" target="_blank" class="text-muted fst-italic" style="text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Запрет для индексации</a></li>
                             <li class="mb-2 p-2 bg-body-secondary rounded">
                                 <p class="mb-1">Нумерованный список ссылок:</p>
                                 <ol class="mt-2">
                                     <li class="mb-1"><a href="https://kubsu.ru" title="Официальный сайт Кубанского государственного университета" 
-                                       target="_blank" rel="noopener">КубГУ</a></li>
+                                       target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">КубГУ</a></li>
                                     <li class="mb-1"><a href="https://kubsu.ru/ru/university/departments" 
                                        title="Список всех факультетов и кафедр университета" 
-                                       target="_blank" rel="noopener">Факультеты КубГУ</a></li>
+                                       target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Факультеты КубГУ</a></li>
                                     <li class="mb-1"><a href="https://kubsu.ru/ru/abiturient" 
                                        title="Информация для абитуриентов: правила приема, документы, сроки"
-                                       target="_blank" rel="noopener">Абитуриентам</a></li>
+                                       target="_blank" rel="noopener" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">Абитуриентам</a></li>
                                 </ol>
                             </li>
                             <li class="mb-2 p-2 bg-light rounded">
-                                <a href="ftp://student:password123@ftp.kubsu.ru/public/documents/study_materials.zip">
+                                <a href="ftp://student:password123@ftp.kubsu.ru/public/documents/study_materials.zip" style="color: #0d6efd; text-decoration: none; font-weight: 500; display: block; word-wrap: break-word;">
                                     FTP с авторизацией
                                 </a>
                             </li>
@@ -127,7 +126,7 @@
                 <div class="row g-4">
                     <!-- Таблица -->
                     <section id="table" class="col-12">
-                        <div class="card">
+                        <div class="card" style="box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border: 1px solid rgba(0, 0, 0, 0.125); transition: all 0.15s ease-in-out;">
                             <div class="card-body">
                                 <h2 class="card-title h5 border-bottom pb-2">Таблица данных</h2>
                                 <div class="table-responsive">
@@ -186,39 +185,39 @@
 
                     <!-- Форма -->
                     <section id="form" class="col-12">
-                        <div class="card">
+                        <div class="card" style="box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); border: 1px solid rgba(0, 0, 0, 0.125); transition: all 0.15s ease-in-out;">
                             <div class="card-body">
                                 <h2 class="card-title h5 border-bottom pb-2">Форма</h2>
                                 <form action="#" method="post">
                                     <div class="mb-3">
                                         <label for="fio" class="form-label">ФИО:</label>
-                                        <input type="text" class="form-control" id="fio" name="fio" placeholder="Иванов Иван Иванович" required>
+                                        <input type="text" class="form-control" id="fio" name="fio" placeholder="Иванов Иван Иванович" required style="transition: all 0.15s ease-in-out;">
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Телефон:</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7(999)999-99-99" required>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+7(999)999-99-99" required style="transition: all 0.15s ease-in-out;">
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email:</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="exampleEmail@mail.ru" required>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="exampleEmail@mail.ru" required style="transition: all 0.15s ease-in-out;">
                                     </div>
                                     
                                     <div class="mb-3">
                                         <label for="birthdate" class="form-label">Дата рождения:</label>
-                                        <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+                                        <input type="date" class="form-control" id="birthdate" name="birthdate" required style="transition: all 0.15s ease-in-out;">
                                     </div>
 
                                     <fieldset class="mb-3">
                                         <legend class="form-label">Пол:</legend>
                                         <div class="d-flex flex-column flex-sm-row gap-3">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" id="gender-male" name="gender" value="male" required>
+                                                <input class="form-check-input" type="radio" id="gender-male" name="gender" value="male" required style="transition: all 0.15s ease-in-out;">
                                                 <label class="form-check-label" for="gender-male">Мужской</label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" id="gender-female" name="gender" value="female">
+                                                <input class="form-check-input" type="radio" id="gender-female" name="gender" value="female" style="transition: all 0.15s ease-in-out;">
                                                 <label class="form-check-label" for="gender-female">Женский</label>
                                             </div>
                                         </div>
@@ -226,7 +225,7 @@
 
                                     <div class="mb-3">
                                         <label class="form-label">Любимые языки программирования:</label>
-                                        <select class="form-select" name="languages[]" multiple size="5" required>
+                                        <select class="form-select" name="languages[]" multiple size="5" required style="transition: all 0.15s ease-in-out;">
                                             <option>Pascal</option>
                                             <option>C</option>
                                             <option>C++</option>
@@ -243,17 +242,17 @@
 
                                     <div class="mb-3">
                                         <label for="bio" class="form-label">Биография:</label>
-                                        <textarea class="form-control" id="bio" name="bio" rows="4" placeholder="Расскажите о себе..."></textarea>
+                                        <textarea class="form-control" id="bio" name="bio" rows="4" placeholder="Расскажите о себе..." style="transition: all 0.15s ease-in-out;"></textarea>
                                     </div>
                                     
                                     <div class="mb-3">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="contract" name="contract" required>
+                                            <input class="form-check-input" type="checkbox" id="contract" name="contract" required style="transition: all 0.15s ease-in-out;">
                                             <label class="form-check-label" for="contract">С контрактом ознакомлен(а)</label>
                                         </div>
                                     </div>
                                     
-                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                    <button type="submit" class="btn btn-primary" style="transition: all 0.15s ease-in-out;">Сохранить</button>
                                 </form>
                             </div>
                         </div>
@@ -272,5 +271,72 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* Медиа-запросы и специфичные стили для десктопной версии */
+        @media (min-width: 768px) {
+            .header-mobile {
+                display: none !important;
+            }
+            
+            .logo-title-absolute {
+                display: flex !important;
+            }
+            
+            .main-nav-absolute {
+                display: flex !important;
+            }
+            
+            .logo-title-absolute .logo img {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .logo-title-absolute .logo img {
+                width: 100px !important;
+                height: 100px !important;
+            }
+            
+            /* Градиент для хедера на больших экранах */
+            header.bg-dark {
+                background: linear-gradient(135deg, #2c3e50, #3498db) !important;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .logo-title-absolute {
+                left: 40px !important;
+            }
+            
+            .main-nav-absolute {
+                right: 40px !important;
+            }
+            
+            .logo-title-absolute .logo img {
+                width: 120px !important;
+                height: 120px !important;
+            }
+        }
+
+        /* Стили для ссылок при наведении */
+        .links-list a:hover {
+            color: #0a58ca !important;
+        }
+
+        /* Стили для улучшения доступности */
+        .btn:focus,
+        .form-control:focus,
+        .form-select:focus,
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+        }
+
+        /* Анимации для карточек */
+        .card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+    </style>
 </body>
 </html>
