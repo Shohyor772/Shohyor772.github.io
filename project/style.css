@@ -1,0 +1,1651 @@
+/* Логотип компании */
+.logo {
+  display: block; /* Делаем элемент блочным */
+  width: auto; /* Ширина будет определяться содержимым */
+  height: 40px; /* Фиксированная высота */
+}
+
+.logo-img {
+  width: auto; /* Автоматическая ширина для сохранения пропорций */
+  height: 100%; /* Занимает 100% высоты родителя (40px) */
+  max-width: 200px; /* Максимальная ширина логотипа */
+  object-fit: contain; /* Сохраняет пропорции изображения */
+}
+
+/* Секция формы обратной связи (внизу страницы) */
+.contact-form-section {
+  background: #0f0c13; /* Темно-синий/фиолетовый фон */
+  padding: 4rem 2rem; /* Внутренние отступы: 4rem сверху/снизу, 2rem по бокам */
+  color: white; /* Белый цвет текста */
+}
+
+.contact-form-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование по горизонтали */
+  display: flex; /* Flexbox для расположения элементов */
+  gap: 3rem; /* Промежуток между колонками */
+  align-items: flex-start; /* Выравнивание элементов по верхнему краю */
+}
+
+/* Левая колонка с описанием и контактами */
+.contact-form-left {
+  flex: 0 0 400px; /* Фиксированная ширина 400px, не растягивается, не сжимается */
+}
+
+.contact-form-left h2 {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.contact-form-left p {
+  font-size: 1rem; /* Стандартный размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+  margin-bottom: 2rem; /* Отступ снизу */
+  color: #ccc; /* Светло-серый цвет текста */
+}
+
+/* Блок с контактной информацией */
+.contact-info {
+  display: flex; /* Flexbox для расположения элементов */
+  flex-direction: column; /* Вертикальное расположение */
+  gap: 1rem; /* Промежуток между элементами */
+}
+
+.contact-item {
+  display: flex; /* Flexbox для расположения иконки и текста */
+  align-items: center; /* Выравнивание по вертикали по центру */
+  gap: 0.5rem; /* Промежуток между иконкой и текстом */
+  font-size: 1rem; /* Размер шрифта */
+}
+
+.contact-icon {
+  font-size: 1.2rem; /* Размер иконки */
+  color: #ff6b6b; /* Красный цвет иконки */
+}
+
+.contact-text {
+  color: #fff; /* Белый цвет текста */
+}
+
+/* Правая колонка с формой */
+.contact-form-right {
+  flex: 1; /* Занимает всё доступное пространство */
+}
+
+.contact-form {
+  display: flex; /* Flexbox для формы */
+  flex-direction: column; /* Вертикальное расположение полей */
+  gap: 1rem; /* Промежуток между полями */
+}
+
+.form-group {
+  display: flex; /* Flexbox для группы полей */
+  flex-direction: column; /* Вертикальное расположение */
+  gap: 0.5rem; /* Промежуток между полем и подписью */
+}
+
+/* Стили для полей ввода и textarea */
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem; /* Внутренние отступы */
+  border: 1px solid #444; /* Темно-серая рамка */
+  background: #1a1a3a; /* Темно-синий фон */
+  color: white; /* Белый цвет текста */
+  border-radius: 4px; /* Скругление углов */
+  font-size: 1rem; /* Размер шрифта */
+  transition: border 0.3s ease; /* Плавная анимация изменения рамки */
+}
+
+/* Стили при фокусе на поле */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff6b6b; /* Красная рамка при фокусе */
+  outline: none; /* Убираем стандартный outline */
+}
+
+.form-group textarea {
+  resize: vertical; /* Разрешаем изменять размер только по вертикали */
+}
+
+/* Стили для чекбокса согласия */
+.checkbox-label {
+  display: flex; /* Flexbox для расположения чекбокса и текста */
+  align-items: center; /* Выравнивание по вертикали по центру */
+  gap: 0.5rem; /* Промежуток между чекбоксом и текстом */
+  font-size: 0.9rem; /* Немного уменьшенный размер шрифта */
+  color: #ccc; /* Светло-серый цвет текста */
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px; /* Ширина чекбокса */
+  height: 16px; /* Высота чекбокса */
+  accent-color: #ff6b6b; /* Красный цвет чекбокса (современные браузеры) */
+}
+
+/* Капча (не используется в текущей версии) */
+.captcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кнопка отправки формы */
+.form-submit {
+  padding: 0.75rem; /* Внутренние отступы */
+  background: #ff6b6b; /* Красный фон */
+  color: white; /* Белый цвет текста */
+  border: none; /* Без рамки */
+  border-radius: 4px; /* Скругление углов */
+  font-size: 1rem; /* Размер шрифта */
+  font-weight: 600; /* Полужирное начертание */
+  cursor: pointer; /* Курсор-указатель при наведении */
+  transition: background 0.3s ease; /* Плавная анимация фона */
+}
+
+.form-submit:hover {
+  background: #ff4d4d; /* Более темный красный при наведении */
+}
+
+/* Футер (подвал сайта) */
+.footer {
+  background: #0f0c13; /* Темный фон */
+  padding: 2rem 2rem 1rem; /* Внутренние отступы: 2rem сверху, 2rem по бокам, 1rem снизу */
+  color: #ccc; /* Светло-серый цвет текста */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+.footer-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+/* Социальные иконки в футере */
+.social-icons {
+  display: flex; /* Flexbox для расположения иконок */
+  justify-content: center; /* Центрирование по горизонтали */
+  gap: 1rem; /* Промежуток между иконками */
+  margin-top: 1rem; /* Отступ сверху */
+}
+
+.social-icon {
+  display: inline-flex; /* Flexbox для центрирования содержимого */
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: center; /* Горизонтальное центрирование */
+  width: 30px; /* Ширина иконки */
+  height: 30px; /* Высота иконки */
+  background: #1a1a3a; /* Темно-синий фон */
+  border-radius: 50%; /* Круглая форма */
+  color: white; /* Белый цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-weight: 600; /* Полужирное начертание */
+  transition: background 0.3s ease; /* Плавная анимация фона */
+}
+
+.social-icon:hover {
+  background: #ff6b6b; /* Красный фон при наведении */
+}
+
+/* Адаптивность для мобильных устройств (ширина ≤ 768px) */
+@media (max-width: 768px) {
+  .contact-form-content {
+    flex-direction: column; /* Вертикальное расположение колонок */
+    align-items: stretch; /* Растягиваем элементы на всю ширину */
+  }
+
+  .contact-form-left {
+    flex: 0 0 auto; /* Сбрасываем фиксированную ширину */
+  }
+
+  .contact-form-right {
+    flex: 0 0 auto; /* Сбрасываем гибкое растяжение */
+  }
+}
+
+/* Блок "С нами работают" (логотипы клиентов) */
+.clients-section {
+  background: white; /* Белый фон */
+  padding: 4rem 2rem; /* Внутренние отступы */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+}
+
+.clients-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+.clients-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.clients-desc {
+  font-size: 1rem; /* Стандартный размер шрифта */
+  text-align: center; /* Центрирование текста */
+  color: #666; /* Серый цвет текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+/* Сетка логотипов клиентов */
+.clients-grid {
+  display: grid; /* CSS Grid для создания сетки */
+  grid-template-columns: repeat(5, 1fr); /* 5 колонок одинаковой ширины */
+  gap: 1rem; /* Промежуток между элементами */
+  margin-bottom: 3rem; /* Отступ снизу */
+}
+
+.client-logo {
+  display: flex; /* Flexbox для центрирования логотипа */
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: center; /* Горизонтальное центрирование */
+  padding: 1rem; /* Внутренние отступы */
+  border: 1px solid #eee; /* Светло-серая рамка */
+  border-radius: 8px; /* Скругление углов */
+  transition: transform 0.3s ease; /* Плавная анимация трансформации */
+}
+
+.client-logo:hover {
+  transform: translateY(-5px); /* Поднимаем элемент при наведении */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Тень при наведении */
+}
+
+.client-img {
+  max-width: 100%; /* Максимальная ширина = 100% родителя */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  object-fit: contain; /* Сохраняет пропорции изображения */
+}
+
+/* Блок "FAQ" (часто задаваемые вопросы) */
+.faq-section {
+  background: white; /* Белый фон */
+  padding: 4rem 2rem; /* Внутренние отступы */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+}
+
+.faq-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+.faq-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+.faq-list {
+  display: flex; /* Flexbox для списка вопросов */
+  flex-direction: column; /* Вертикальное расположение */
+  gap: 1rem; /* Промежуток между вопросами */
+}
+
+.faq-item {
+  border: 1px solid #eee; /* Светло-серая рамка */
+  border-radius: 8px; /* Скругление углов */
+  overflow: hidden; /* Скрываем выходящее за границы содержимое */
+  transition: box-shadow 0.3s ease; /* Плавная анимация тени */
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Тень при наведении */
+}
+
+.faq-question {
+  padding: 1rem 1.5rem; /* Внутренние отступы */
+  background: #f5f5f5; /* Светло-серый фон */
+  font-size: 1rem; /* Размер шрифта */
+  font-weight: 600; /* Полужирное начертание */
+  cursor: pointer; /* Курсор-указатель */
+  display: flex; /* Flexbox для иконки и текста */
+  align-items: center; /* Выравнивание по вертикали */
+  gap: 0.5rem; /* Промежуток между иконкой и текстом */
+}
+
+.faq-question::before {
+  content: '❓'; /* Иконка вопроса (emoji) */
+  font-size: 1.2rem; /* Размер иконки */
+  color: #ff6b6b; /* Красный цвет иконки */
+}
+
+.faq-answer {
+  padding: 1.5rem; /* Внутренние отступы */
+  font-size: 0.9rem; /* Немного уменьшенный размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+  color: #555; /* Темно-серый цвет текста */
+  display: none; /* Скрыт по умолчанию (аккордеон) */
+}
+
+/* Когда элемент активен (раскрыт), показываем ответ */
+.faq-item.active .faq-answer {
+  display: block; /* Показываем блок с ответом */
+}
+
+/* Выделение активного вопроса красной рамкой */
+.faq-item.active {
+  border: 2px solid #ff6b6b; /* Красная рамка */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+  }
+
+  .faq-question {
+    font-size: 0.9rem; /* Уменьшаем размер шрифта вопроса */
+  }
+
+  .faq-answer {
+    font-size: 0.8rem; /* Уменьшаем размер шрифта ответа */
+  }
+}
+
+/* Блок "Последние кейсы" (кейсы/проекты) */
+.cases-section {
+  background: white; /* Белый фон */
+  padding: 4rem 2rem; /* Внутренние отступы */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+}
+
+.cases-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+.cases-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+/* Сетка кейсов */
+.cases-grid {
+  display: grid; /* CSS Grid для создания сетки */
+  grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  gap: 2rem; /* Промежуток между элементами */
+  margin-bottom: 3rem; /* Отступ снизу */
+}
+
+.case-card {
+  position: relative; /* Для позиционирования текста поверх изображения */
+  border-radius: 8px; /* Скругление углов */
+  overflow: hidden; /* Скрываем выходящее за границы содержимое */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Легкая тень */
+  transition: transform 0.3s ease; /* Плавная анимация трансформации */
+  height: 400px; /* Фиксированная высота карточки */
+}
+
+.case-image {
+  width: 100%; /* Ширина 100% родителя */
+  height: 100%; /* Высота 100% родителя */
+  object-fit: cover; /* Заполняет весь контейнер, обрезая изображение */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Прижато к верху */
+  left: 0; /* Прижато к левому краю */
+  z-index: 1; /* Ниже текста */
+}
+
+.case-text {
+  position: absolute; /* Абсолютное позиционирование */
+  bottom: 0; /* Прижато к низу */
+  left: 0; /* Прижато к левому краю */
+  right: 0; /* Прижато к правому краю */
+  padding: 1rem; /* Внутренние отступы */
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); /* Градиентный фон */
+  color: white; /* Белый цвет текста */
+  z-index: 2; /* Выше изображения */
+  display: flex; /* Flexbox для расположения элементов */
+  flex-direction: column; /* Вертикальное расположение */
+  justify-content: flex-end; /* Выравнивание элементов внизу */
+}
+
+.case-date {
+  font-size: 0.8rem; /* Маленький размер шрифта */
+  color: #ccc; /* Светло-серый цвет */
+  margin-bottom: 0.5rem; /* Отступ снизу */
+}
+
+.case-title {
+  font-size: 1rem; /* Размер шрифта */
+  font-weight: 600; /* Полужирное начертание */
+  margin-bottom: 0.5rem; /* Отступ снизу */
+  line-height: 1.4; /* Межстрочный интервал */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Тень текста для лучшей читаемости */
+}
+
+.case-desc {
+  font-size: 0.9rem; /* Размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+  color: #eee; /* Светло-серый цвет текста */
+  margin-top: 0.5rem; /* Отступ сверху */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Тень текста */
+}
+
+/* Блок "Отзывы" */
+.reviews-section {
+  background: white; /* Белый фон */
+  padding: 4rem 2rem; /* Внутренние отступы */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+}
+
+.reviews-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+.reviews-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+.review-slider {
+  position: relative; /* Для позиционирования элементов внутри */
+  max-width: 800px; /* Ограничение максимальной ширины слайдера */
+  margin: 0 auto; /* Центрирование */
+  padding: 2rem; /* Внутренние отступы */
+  border: 1px solid #eee; /* Светло-серая рамка */
+  border-radius: 8px; /* Скругление углов */
+  background: white; /* Белый фон */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Легкая тень */
+}
+
+.review-item {
+  display: none; /* Скрыты по умолчанию (слайдер) */
+  padding: 1.5rem; /* Внутренние отступы */
+  animation: fadeIn 0.5s ease; /* Анимация появления */
+}
+
+.review-item.active {
+  display: block; /* Показываем активный слайд */
+}
+
+/* Анимация плавного появления */
+@keyframes fadeIn {
+  from { opacity: 0; } /* Начало: прозрачность 0 */
+  to { opacity: 1; } /* Конец: полная непрозрачность */
+}
+
+.review-logo {
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.review-logo-img {
+  width: 100px; /* Ширина логотипа */
+  height: auto; /* Автоматическая высота */
+  object-fit: contain; /* Сохраняет пропорции */
+}
+
+.review-text {
+  font-size: 0.9rem; /* Размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.review-author {
+  font-size: 0.8rem; /* Маленький размер шрифта */
+  color: #666; /* Серый цвет текста */
+  line-height: 1.4; /* Межстрочный интервал */
+}
+
+/* Элементы управления слайдером */
+.review-controls {
+  display: flex; /* Flexbox для расположения кнопок и счетчика */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Выравнивание по вертикали по центру */
+  gap: 1rem; /* Промежуток между элементами */
+  margin-top: 2rem; /* Отступ сверху */
+}
+
+.review-prev,
+.review-next {
+  background: #f5f5f5; /* Светло-серый фон */
+  border: 1px solid #ccc; /* Серая рамка */
+  color: #666; /* Серый цвет текста */
+  width: 40px; /* Ширина кнопки */
+  height: 40px; /* Высота кнопки */
+  border-radius: 50%; /* Круглая форма */
+  display: flex; /* Flexbox для центрирования стрелки */
+  align-items: center; /* Вертикальное центрирование */
+  justify-content: center; /* Горизонтальное центрирование */
+  cursor: pointer; /* Курсор-указатель */
+  transition: all 0.3s ease; /* Плавная анимация всех свойств */
+}
+
+.review-prev:hover,
+.review-next:hover {
+  background: #e5e5e5; /* Более темный фон при наведении */
+  border-color: #999; /* Более темная рамка при наведении */
+}
+
+.review-counter {
+  font-size: 1rem; /* Размер шрифта */
+  font-weight: 600; /* Полужирное начертание */
+  color: #333; /* Темно-серый цвет */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .cases-grid {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+  }
+
+  .case-card {
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование элементов */
+  }
+
+  .case-image {
+    width: 100%; /* Ширина 100% */
+    height: 200px; /* Фиксированная высота */
+  }
+
+  .review-slider {
+    max-width: 100%; /* Занимает всю доступную ширину */
+    padding: 1rem; /* Уменьшаем отступы */
+  }
+
+  .review-logo-img {
+    width: 80px; /* Уменьшаем ширину логотипа */
+  }
+
+  .review-controls {
+    flex-direction: column; /* Вертикальное расположение элементов */
+    gap: 0.5rem; /* Уменьшаем промежуток */
+  }
+}
+
+/* Блок "Наши профессиональные разработчики" */
+.developers-section {
+  background: white; /* Белый фон */
+  padding: 4rem 2rem; /* Внутренние отступы */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+}
+
+.developers-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+.developers-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+.developers-cards {
+  display: flex; /* Flexbox для расположения карточек */
+  justify-content: center; /* Центрирование по горизонтали */
+  gap: 3rem; /* Промежуток между карточками */
+  flex-wrap: wrap; /* Перенос на новую строку при нехватке места */
+  margin-bottom: 3rem; /* Отступ снизу */
+}
+
+.developers-card {
+  text-align: center; /* Центрирование текста */
+  padding: 1.5rem; /* Внутренние отступы */
+  border-radius: 8px; /* Скругление углов */
+  transition: transform 0.3s ease; /* Плавная анимация трансформации */
+}
+
+.developers-card:hover {
+  transform: translateY(-5px); /* Поднимаем карточку при наведении */
+}
+
+.developers-icon {
+  width: 60px; /* Ширина иконки */
+  height: auto; /* Автоматическая высота */
+  margin: 0 auto 1rem; /* Центрирование и отступ снизу */
+}
+
+.developers-time {
+  font-size: 1.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  color: #ff6b6b; /* Красный цвет */
+  margin-bottom: 0.5rem; /* Отступ снизу */
+}
+
+.developers-desc {
+  font-size: 0.9rem; /* Размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+}
+
+/* Блок "Команда" */
+.team-section {
+  background: white; /* Белый фон */
+  padding: 4rem 2rem; /* Внутренние отступы */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+}
+
+.team-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+}
+
+.team-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+.team-grid {
+  display: grid; /* CSS Grid для создания сетки */
+  grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+  gap: 2rem; /* Промежуток между элементами */
+  margin-bottom: 3rem; /* Отступ снизу */
+}
+
+.team-member {
+  text-align: center; /* Центрирование содержимого */
+  padding: 1.5rem; /* Внутренние отступы */
+  border-radius: 8px; /* Скругление углов */
+  transition: transform 0.3s ease; /* Плавная анимация трансформации */
+}
+
+.team-member:hover {
+  transform: translateY(-5px); /* Поднимаем карточку при наведении */
+}
+
+.team-photo {
+  width: 150px; /* Ширина фотографии */
+  height: 150px; /* Высота фотографии (квадрат) */
+  border-radius: 8px; /* Скругление углов */
+  object-fit: cover; /* Заполняет весь контейнер, обрезая изображение */
+  margin-bottom: 1rem; /* Отступ снизу */
+}
+
+.team-name {
+  font-size: 1.1rem; /* Размер шрифта */
+  font-weight: 600; /* Полужирное начертание */
+  margin-bottom: 0.5rem; /* Отступ снизу */
+}
+
+.team-role {
+  font-size: 0.9rem; /* Размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+  color: #555; /* Темно-серый цвет текста */
+}
+
+.team-btn {
+  display: block; /* Блочный элемент */
+  width: 200px; /* Фиксированная ширина */
+  margin: 0 auto; /* Центрирование по горизонтали */
+  padding: 0.75rem; /* Внутренние отступы */
+  border: 2px solid #ccc; /* Серая рамка */
+  color: #666; /* Серый цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-weight: 600; /* Полужирное начертание */
+  text-align: center; /* Центрирование текста */
+  border-radius: 4px; /* Скругление углов */
+  transition: all 0.3s ease; /* Плавная анимация всех свойств */
+}
+
+.team-btn:hover {
+  background: #f5f5f5; /* Светло-серый фон при наведении */
+  border-color: #999; /* Более темная рамка при наведении */
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .developers-cards {
+    flex-direction: column; /* Вертикальное расположение карточек */
+    align-items: center; /* Центрирование элементов */
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+  }
+
+  .team-photo {
+    width: 120px; /* Уменьшаем размер фотографии */
+    height: 120px; /* Уменьшаем размер фотографии */
+  }
+}
+
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 колонка на мобильных */
+  }
+
+  .team-photo {
+    width: 100px; /* Еще меньше размер фотографии */
+    height: 100px; /* Еще меньше размер фотографии */
+  }
+}
+    /* Блок "Тарифы" */
+.pricing-section {
+  position: relative; /* Для позиционирования фона */
+  padding: 5rem 2rem; /* Внутренние отступы */
+  background: white; /* Белый фон */
+  color: #1a1a3a; /* Темно-синий цвет текста */
+  overflow: hidden; /* Скрываем выходящее за границы содержимое */
+}
+
+.pricing-bg {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Прижато к верху */
+  left: 0; /* Прижато к левому краю */
+  width: 100%; /* Ширина 100% родителя */
+  height: 100%; /* Высота 100% родителя */
+  background: 
+    repeating-linear-gradient(45deg, 
+      #fffbe6 0px, #fffbe6 100px,
+      #fff0d9 100px, #fff0d9 200px,
+      #ffe6cc 200px, #ffe6cc 300px,
+      #ffdbb3 300px, #ffdbb3 400px); /* Зигзагообразный градиентный фон */
+  z-index: -1; /* Под основным содержимым */
+}
+
+.pricing-content {
+  max-width: 1200px; /* Ограничение максимальной ширины */
+  margin: 0 auto; /* Центрирование */
+  position: relative; /* Для z-index */
+  z-index: 10; /* Выше фона */
+}
+
+.pricing-title {
+  font-size: 2.5rem; /* Крупный размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  text-align: center; /* Центрирование текста */
+  margin-bottom: 3rem; /* Большой отступ снизу */
+}
+
+.pricing-cards {
+  display: flex; /* Flexbox для расположения карточек */
+  justify-content: center; /* Центрирование по горизонтали */
+  gap: 2rem; /* Промежуток между карточками */
+  flex-wrap: wrap; /* Перенос на новую строку при нехватке места */
+  margin-bottom: 3rem; /* Отступ снизу */
+}
+
+.pricing-card {
+  background: white; /* Белый фон карточки */
+  padding: 2rem; /* Внутренние отступы */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Легкая тень */
+  width: 300px; /* Фиксированная ширина */
+  transition: transform 0.3s ease; /* Плавная анимация трансформации */
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px); /* Поднимаем карточку при наведении */
+}
+
+.pricing-card-highlight {
+  border: 2px solid #ff6b6b; /* Красная рамка для выделенного тарифа */
+  box-shadow: 0 4px 12px rgba(255,107,107,0.1); /* Тень с красным оттенком */
+}
+
+.pricing-card-title {
+  font-size: 1.5rem; /* Размер шрифта */
+  font-weight: 700; /* Жирное начертание */
+  color: #ff6b6b; /* Красный цвет */
+  margin-bottom: 1rem; /* Отступ снизу */
+  text-align: center; /* Центрирование текста */
+}
+
+.pricing-features {
+  list-style: none; /* Убираем стандартные маркеры списка */
+  margin-bottom: 1.5rem; /* Отступ снизу */
+  font-size: 0.9rem; /* Размер шрифта */
+  line-height: 1.6; /* Межстрочный интервал */
+}
+
+.pricing-features li {
+  margin-bottom: 0.5rem; /* Отступ между пунктами */
+  position: relative; /* Для позиционирования псевдоэлемента */
+  padding-left: 1.5rem; /* Отступ слева для галочки */
+}
+
+.pricing-features li::before {
+  content: '✓'; /* Галочка как маркер */
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0; /* Прижато к левому краю */
+  color: #ff6b6b; /* Красный цвет */
+  font-weight: bold; /* Жирное начертание */
+}
+
+.pricing-btn {
+  display: block; /* Блочный элемент */
+  width: 100%; /* Ширина 100% родителя */
+  padding: 0.75rem; /* Внутренние отступы */
+  border: 2px solid #ff6b6b; /* Красная рамка */
+  color: #ff6b6b; /* Красный цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-weight: 600; /* Полужирное начертание */
+  text-align: center; /* Центрирование текста */
+  border-radius: 4px; /* Скругление углов */
+  transition: all 0.3s ease; /* Плавная анимация всех свойств */
+}
+
+.pricing-btn:hover {
+  background: #ff6b6b; /* Красный фон при наведении */
+  color: white; /* Белый цвет текста при наведении */
+}
+
+.pricing-btn-highlight {
+  background: #ff6b6b; /* Красный фон для выделенной кнопки */
+  color: white; /* Белый цвет текста */
+}
+
+.pricing-btn-highlight:hover {
+  background: #ff4d4d; /* Более темный красный при наведении */
+  border-color: #ff4d4d; /* Более темная рамка при наведении */
+}
+
+.pricing-footer {
+  text-align: center; /* Центрирование текста */
+  font-size: 0.9rem; /* Размер шрифта */
+  color: #666; /* Серый цвет текста */
+  margin-top: 2rem; /* Отступ сверху */
+}
+
+.pricing-footer-link {
+  display: inline-block; /* Строчно-блочный элемент */
+  margin-top: 0.5rem; /* Отступ сверху */
+  color: #ff6b6b; /* Красный цвет */
+  text-decoration: underline; /* Подчеркивание */
+  font-weight: 600; /* Полужирное начертание */
+}
+
+.pricing-footer-link:hover {
+  color: #ff4d4d; /* Более темный красный при наведении */
+}
+
+/* Адаптивность для тарифов на мобильных устройствах */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column; /* Вертикальное расположение карточек */
+    align-items: center; /* Центрирование элементов */
+  }
+
+  .pricing-card {
+    width: 100%; /* Ширина 100% родителя */
+    max-width: 400px; /* Максимальная ширина */
+  }
+
+  .pricing-title {
+    font-size: 2rem; /* Уменьшаем размер заголовка */
+  }
+}
+
+    /* Общие стили для всех элементов */
+    * {
+      margin: 0; /* Убираем внешние отступы */
+      padding: 0; /* Убираем внутренние отступы */
+      box-sizing: border-box; /* Размеры включают padding и border */
+    }
+
+    body {
+      font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Шрифты */
+      color: white; /* Белый цвет текста по умолчанию */
+      overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+      background: #0f0c13; /* Темный фон для всей страницы */
+    }
+
+    /* Фоновое видео или изображение */
+    .video-bg {
+      position: fixed; /* Фиксированное позиционирование */
+      top: 0; /* Прижато к верху */
+      left: 0; /* Прижато к левому краю */
+      width: 100%; /* Ширина 100% окна браузера */
+      height: 100%; /* Высота 100% окна браузера */
+      object-fit: cover; /* Заполняет весь контейнер, обрезая видео */
+      z-index: -1; /* Под основным содержимым */
+      opacity: 0.6; /* Полупрозрачность для лучшей читаемости текста */
+    }
+
+    /* Градиент поверх видео для лучшей читаемости текста */
+    .header::before {
+      content: ''; /* Псевдоэлемент */
+      position: absolute; /* Абсолютное позиционирование */
+      top: 0; /* Прижато к верху */
+      left: 0; /* Прижато к левому краю */
+      width: 100%; /* Ширина 100% родителя */
+      height: 100%; /* Высота 100% родителя */
+      background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 100%); /* Градиент */
+      z-index: -1; /* Под текстом, но над видео */
+    }
+
+    /* Верхняя панель (меню) */
+    .top-bar {
+      position: fixed; /* Фиксированное позиционирование */
+      top: 0; /* Прижато к верху окна */
+      left: 0; /* Прижато к левому краю */
+      width: 100%; /* Ширина 100% окна */
+      padding: 1rem 2rem; /* Внутренние отступы */
+      background: rgba(15, 12, 19, 0.7); /* Полупрозрачный темный фон */
+      z-index: 100; /* Высокий z-index для поверх других элементов */
+      display: flex; /* Flexbox для расположения элементов */
+      align-items: center; /* Выравнивание по вертикали по центру */
+      justify-content: center; /* Центрирование по горизонтали */
+    }
+
+    .nav-container {
+      display: flex; /* Flexbox для расположения логотипа и меню */
+      align-items: center; /* Выравнивание по вертикали по центру */
+      gap: 1.5rem; /* Промежуток между элементами */
+    }
+
+    .logo {
+      display: flex; /* Flexbox для расположения иконки и текста */
+      align-items: center; /* Выравнивание по вертикали по центру */
+      gap: 0.5rem; /* Промежуток между иконкой и текстом */
+      font-size: 1.2rem; /* Размер шрифта */
+      font-weight: bold; /* Жирное начертание */
+      color: white; /* Белый цвет текста */
+      text-decoration: none; /* Убираем подчеркивание */
+    }
+
+    .logo span {
+      color: #ff6b6b; /* Красный цвет для части текста логотипа */
+    }
+
+    /* Основное меню навигации */
+    .nav-menu {
+      display: flex; /* Flexbox для горизонтального меню */
+      gap: 1.5rem; /* Промежуток между пунктами меню */
+      list-style: none; /* Убираем стандартные маркеры списка */
+    }
+
+    .nav-menu li {
+      position: relative; /* Для позиционирования выпадающего меню */
+    }
+
+    .nav-menu li a {
+      color: white; /* Белый цвет текста */
+      text-decoration: none; /* Убираем подчеркивание */
+      font-size: 0.9rem; /* Размер шрифта */
+      font-weight: 500; /* Среднее начертание */
+      padding: 0.5rem 0.75rem; /* Внутренние отступы */
+      transition: all 0.3s ease; /* Плавная анимация всех свойств */
+      position: relative; /* Для псевдоэлемента подчеркивания */
+      display: block; /* Блочный элемент */
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: #ff6b6b; /* Красный цвет при наведении/активности */
+    }
+
+    /* Подчеркивание активной ссылки */
+    .nav-menu li a.active::after {
+      content: ''; /* Псевдоэлемент */
+      position: absolute; /* Абсолютное позиционирование */
+      bottom: -2px; /* Смещение вниз от текста */
+      left: 0; /* Прижато к левому краю */
+      width: 100%; /* Ширина 100% родителя */
+      height: 2px; /* Высота линии */
+      background-color: #ff6b6b; /* Красный цвет линии */
+    }
+
+    /* Выпадающее меню */
+    .dropdown-menu {
+      position: absolute; /* Абсолютное позиционирование */
+      top: 100%; /* Под пунктом меню */
+      left: 0; /* Прижато к левому краю родителя */
+      background: #ff4d4d; /* Красный фон */
+      min-width: 200px; /* Минимальная ширина */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Тень */
+      border-radius: 4px; /* Скругление углов */
+      opacity: 0; /* Прозрачность 0 (скрыто) */
+      visibility: hidden; /* Невидимо (не занимает место) */
+      transform: translateY(-10px); /* Сдвинуто вверх на 10px */
+      transition: all 0.3s ease; /* Плавная анимация всех свойств */
+      z-index: 1000; /* Высокий z-index */
+      padding: 0.5rem 0; /* Внутренние отступы сверху/снизу */
+    }
+
+    /* Показываем выпадающее меню при наведении на родительский li */
+    .nav-menu li:hover .dropdown-menu {
+      opacity: 1; /* Полная непрозрачность */
+      visibility: visible; /* Делаем видимым */
+      transform: translateY(0); /* Возвращаем на место */
+    }
+
+    .dropdown-menu a {
+      color: white; /* Белый цвет текста */
+      padding: 0.75rem 1.5rem; /* Внутренние отступы */
+      display: block; /* Блочный элемент */
+      text-decoration: none; /* Убираем подчеркивание */
+      font-weight: 500; /* Среднее начертание */
+      transition: background 0.2s; /* Плавная анимация фона */
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(255,255,255,0.1); /* Слегка белый фон при наведении */
+    }
+
+    /* Основной контент шапки (hero section) */
+    .main-content {
+      position: relative; /* Для z-index */
+      padding: 8rem 2rem 2rem; /* Отступы: 8rem сверху (чтобы не под меню), 2rem по бокам и снизу */
+      max-width: 1200px; /* Ограничение максимальной ширины */
+      margin: 0 auto; /* Центрирование по горизонтали */
+      display: flex; /* Flexbox для расположения текста и статистики */
+      align-items: flex-start; /* Выравнивание по верхнему краю */
+      gap: 3rem; /* Промежуток между колонками */
+    }
+
+    .hero-text {
+      max-width: 500px; /* Ограничение максимальной ширины текста */
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem; /* Очень крупный размер шрифта */
+      line-height: 1.1; /* Межстрочный интервал */
+      margin-bottom: 1rem; /* Отступ снизу */
+      font-weight: 700; /* Жирное начертание */
+    }
+
+    .hero-text p {
+      font-size: 1.1rem; /* Размер шрифта */
+      margin-bottom: 2rem; /* Отступ снизу */
+      line-height: 1.6; /* Межстрочный интервал */
+    }
+
+    /* Основная кнопка */
+    .btn {
+      display: inline-block; /* Строчно-блочный элемент */
+      padding: 0.75rem 2rem; /* Внутренние отступы */
+      border: 2px solid #ff6b6b; /* Красная рамка */
+      color: #ff6b6b; /* Красный цвет текста */
+      text-decoration: none; /* Убираем подчеркивание */
+      font-weight: 600; /* Полужирное начертание */
+      transition: all 0.3s ease; /* Плавная анимация всех свойств */
+      border-radius: 4px; /* Скругление углов */
+      background: transparent; /* Прозрачный фон */
+    }
+
+    .btn:hover {
+      background: #ff6b6b; /* Красный фон при наведении */
+      color: white; /* Белый цвет текста при наведении */
+    }
+
+    /* Статистика в шапке */
+    .stats {
+      display: grid; /* CSS Grid для создания сетки */
+      grid-template-columns: repeat(3, 1fr); /* 3 колонки одинаковой ширины */
+      gap: 2rem; /* Промежуток между элементами */
+      max-width: 500px; /* Ограничение максимальной ширины */
+    }
+
+    .stat-item {
+      display: flex; /* Flexbox для расположения числа и описания */
+      flex-direction: column; /* Вертикальное расположение */
+      align-items: flex-start; /* Выравнивание по левому краю */
+      padding-left: 1rem; /* Отступ слева для линии */
+      border-left: 3px solid #ff6b6b; /* Красная вертикальная линия слева */
+    }
+
+    .stat-number {
+      font-size: 2.5rem; /* Крупный размер шрифта для чисел */
+      font-weight: 700; /* Жирное начертание */
+      margin-bottom: 0.5rem; /* Отступ снизу */
+      display: flex; /* Flexbox для числа и иконки кубка */
+      align-items: center; /* Выравнивание по вертикали по центру */
+      gap: 0.5rem; /* Промежуток между числом и иконкой */
+    }
+
+    .stat-desc {
+      font-size: 0.9rem; /* Размер шрифта */
+      line-height: 1.4; /* Межстрочный интервал */
+      color: #ccc; /* Светло-серый цвет текста */
+    }
+
+    /* Картинка кубка рядом с #1 */
+    .trophy-icon {
+      width: 30px; /* Ширина иконки */
+      height: auto; /* Автоматическая высота */
+    }
+
+    /* Блок услуг ниже шапки */
+    .services-section {
+      background: white; /* Белый фон */
+      padding: 4rem 2rem; /* Внутренние отступы */
+      color: #1a1a3a; /* Темно-синий цвет текста */
+    }
+
+    .services-section h2 {
+      font-size: 2.5rem; /* Крупный размер шрифта */
+      font-weight: 700; /* Жирное начертание */
+      margin-bottom: 1rem; /* Отступ снизу */
+      text-align: center; /* Центрирование текста */
+    }
+
+    .services-section p {
+      font-size: 1rem; /* Размер шрифта */
+      margin-bottom: 3rem; /* Отступ снизу */
+      text-align: center; /* Центрирование текста */
+      color: #666; /* Серый цвет текста */
+    }
+
+    /* Сетка услуг (8 элементов) */
+    .services-grid {
+      display: grid; /* CSS Grid для создания сетки */
+      grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+      gap: 2rem; /* Промежуток между элементами */
+      max-width: 1200px; /* Ограничение максимальной ширины */
+      margin: 0 auto; /* Центрирование */
+    }
+
+    .service-item {
+      text-align: center; /* Центрирование содержимого */
+      padding: 1.5rem; /* Внутренние отступы */
+      border-radius: 8px; /* Скругление углов */
+      transition: transform 0.3s ease; /* Плавная анимация трансформации */
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px); /* Поднимаем элемент при наведении */
+    }
+
+    .service-icon {
+      width: 60px; /* Ширина иконки */
+      height: auto; /* Автоматическая высота */
+      margin: 0 auto 1rem; /* Центрирование и отступ снизу */
+    }
+
+    .service-title {
+      font-size: 1rem; /* Размер шрифта */
+      font-weight: 600; /* Полужирное начертание */
+      margin-bottom: 0.5rem; /* Отступ снизу */
+    }
+
+    .service-desc {
+      font-size: 0.9rem; /* Размер шрифта */
+      color: #555; /* Темно-серый цвет текста */
+      line-height: 1.5; /* Межстрочный интервал */
+    }
+
+    /* Блок "Поддержка от Drupal-coder" */
+    .support-section {
+      background: white; /* Белый фон */
+      padding: 4rem 2rem 6rem; /* Отступы: 4rem сверху, 2rem по бокам, 6rem снизу */
+      color: #1a1a3a; /* Темно-синий цвет текста */
+      position: relative; /* Для z-index */
+      z-index: 10; /* Выше фона */
+    }
+
+    .support-section h2 {
+      font-size: 2rem; /* Размер шрифта */
+      font-weight: 700; /* Жирное начертание */
+      margin-bottom: 2rem; /* Отступ снизу */
+      text-align: center; /* Центрирование текста */
+    }
+
+    /* Сетка преимуществ поддержки (8 карточек) */
+    .support-grid {
+      display: grid; /* CSS Grid для создания сетки */
+      grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+      gap: 1.5rem; /* Промежуток между элементами */
+      max-width: 1200px; /* Ограничение максимальной ширины */
+      margin: 0 auto; /* Центрирование */
+      position: relative; /* Для z-index */
+      z-index: 10; /* Выше фона */
+    }
+
+    .support-card {
+      background: white; /* Белый фон карточки */
+      padding: 1.5rem; /* Внутренние отступы */
+      border-radius: 8px; /* Скругление углов */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Легкая тень */
+      position: relative; /* Для позиционирования иконки */
+      overflow: hidden; /* Скрываем выходящее за границы содержимое */
+      transition: transform 0.3s ease; /* Плавная анимация трансформации */
+      z-index: 10; /* Выше фона */
+    }
+
+    .support-card:hover {
+      transform: translateY(-5px); /* Поднимаем карточку при наведении */
+    }
+
+    .card-number {
+      font-size: 0.9rem; /* Размер шрифта */
+      font-weight: 600; /* Полужирное начертание */
+      color: #999; /* Серый цвет */
+      margin-bottom: 0.5rem; /* Отступ снизу */
+    }
+
+    .card-title {
+      font-size: 1rem; /* Размер шрифта */
+      font-weight: 600; /* Полужирное начертание */
+      margin-bottom: 0.5rem; /* Отступ снизу */
+      color: #1a1a3a; /* Темно-синий цвет */
+    }
+
+    .card-desc {
+      font-size: 0.9rem; /* Размер шрифта */
+      color: #555; /* Темно-серый цвет текста */
+      line-height: 1.5; /* Межстрочный интервал */
+      margin-bottom: 1rem; /* Отступ снизу */
+    }
+
+    .card-icon {
+      position: absolute; /* Абсолютное позиционирование */
+      bottom: 0.5rem; /* Отступ снизу */
+      right: 0.5rem; /* Отступ справа */
+      width: 30px; /* Ширина иконки */
+      height: auto; /* Автоматическая высота */
+    }
+
+    /* Блок "Экспертиза в Drupal" */
+    .expertise-section {
+      background: #0f0c13; /* Темный фон */
+      padding: 4rem 2rem; /* Внутренние отступы */
+      color: white; /* Белый цвет текста */
+      position: relative; /* Для z-index */
+      z-index: 5; /* Ниже карточек поддержки */
+      overflow: hidden; /* Скрываем выходящее за границы содержимое */
+    }
+
+    .expertise-content {
+      max-width: 1200px; /* Ограничение максимальной ширины */
+      margin: 0 auto; /* Центрирование */
+      display: flex; /* Flexbox для расположения изображения и текста */
+      align-items: flex-start; /* Выравнивание по верхнему краю */
+      gap: 3rem; /* Промежуток между изображением и текстом */
+      position: relative; /* Для z-index */
+    }
+
+    .expertise-image {
+      flex: 0 0 400px; /* Фиксированная ширина 400px */
+      position: relative; /* Для z-index */
+      z-index: 20; /* Выше текста */
+    }
+
+    .expertise-image img {
+      width: 100%; /* Ширина 100% родителя */
+      height: auto; /* Автоматическая высота */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Тень */
+      position: relative; /* Для z-index */
+      z-index: 20; /* Выше текста */
+    }
+
+    .expertise-image img {
+      position: relative; /* Для позиционирования */
+      top: 0; /* Сброс смещения сверху */
+      z-index: 20; /* Выше текста */
+    }
+
+    .expertise-text {
+      flex: 1; /* Занимает всё доступное пространство */
+      position: relative; /* Для z-index */
+      z-index: 10; /* Ниже изображения */
+    }
+
+    .expertise-text h2 {
+      font-size: 2.5rem; /* Крупный размер шрифта */
+      font-weight: 700; /* Жирное начертание */
+      margin-bottom: 1rem; /* Отступ снизу */
+    }
+
+    .expertise-list {
+      display: grid; /* CSS Grid для создания сетки */
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+      gap: 1.5rem; /* Промежуток между элементами */
+      margin-top: 1.5rem; /* Отступ сверху */
+    }
+
+    .expertise-item {
+      padding-left: 1rem; /* Отступ слева для линии */
+      border-left: 3px solid #ff6b6b; /* Красная вертикальная линия */
+    }
+
+    .expertise-item p {
+      font-size: 0.9rem; /* Размер шрифта */
+      line-height: 1.6; /* Межстрочный интервал */
+    }
+
+    /* Специальный класс для нижних карточек поддержки (перекрывают экспертизу) */
+    .bottom-card {
+      position: relative; /* Для z-index */
+      z-index: 20; /* Выше блока экспертизы */
+      margin-top: rem; /* Отступ сверху (значение не указано, возможно ошибка) */
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Более выраженная тень */
+    }
+
+    /* Адаптивность */
+
+/* Планшеты и меньше (до 992px) */
+@media (max-width: 992px) {
+  .top-bar {
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    padding: 1rem; /* Уменьшаем отступы */
+    justify-content: flex-start; /* Выравнивание по началу */
+  }
+
+  .nav-container {
+    width: 100%; /* Ширина 100% родителя */
+    justify-content: center; /* Центрирование по горизонтали */
+    flex-wrap: wrap; /* Перенос на новую строку при нехватке места */
+  }
+
+  .nav-menu {
+    margin-top: 1rem; /* Отступ сверху */
+    justify-content: center; /* Центрирование пунктов меню */
+    width: 100%; /* Ширина 100% родителя */
+  }
+
+  .main-content {
+    flex-direction: column; /* Вертикальное расположение текста и статистики */
+    padding-top: 6rem; /* Уменьшаем отступ сверху */
+  }
+
+  .hero-text {
+    max-width: 100%; /* Ширина 100% родителя */
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 4 */
+  }
+
+  .services-section h2 {
+    font-size: 2rem; /* Уменьшаем размер заголовка */
+  }
+
+  .support-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 4 */
+  }
+
+  .expertise-content {
+    flex-direction: column; /* Вертикальное расположение изображения и текста */
+  }
+
+  .expertise-image {
+    flex: 0 0 100%; /* Ширина 100% родителя */
+  }
+
+  .support-card:nth-child(n+5) {
+    margin-top: 0; /* Сбрасываем отступ для карточек с 5-й и далее */
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 1.5rem; /* Уменьшаем промежуток */
+  }
+
+  .service-item {
+    padding: 1rem; /* Уменьшаем отступы */
+    border-radius: 8px; /* Скругление углов */
+    transition: transform 0.3s ease; /* Плавная анимация */
+    text-align: center; /* Центрирование содержимого */
+  }
+
+  .service-icon {
+    width: 50px; /* Уменьшаем размер иконки */
+    height: auto; /* Автоматическая высота */
+    margin: 0 auto 0.5rem; /* Центрирование и уменьшенный отступ */
+  }
+
+  .service-title {
+    font-size: 0.9rem; /* Уменьшаем размер шрифта */
+    font-weight: 600; /* Полужирное начертание */
+    margin-bottom: 0.5rem; /* Отступ снизу */
+    line-height: 1.4; /* Межстрочный интервал */
+  }
+
+  .service-desc {
+    font-size: 0.8rem; /* Уменьшаем размер шрифта */
+    color: #555; /* Темно-серый цвет текста */
+    line-height: 1.6; /* Межстрочный интервал */
+  }
+
+  /* Адаптация тарифов */
+  .pricing-cards {
+    flex-direction: column; /* Вертикальное расположение карточек */
+    align-items: center; /* Центрирование элементов */
+    gap: 1.5rem; /* Уменьшаем промежуток */
+  }
+
+  .pricing-card {
+    width: 100%; /* Ширина 100% родителя */
+    max-width: 400px; /* Максимальная ширина */
+  }
+
+  .pricing-title {
+    font-size: 2rem; /* Уменьшаем размер заголовка */
+  }
+}
+
+/* Мелкие мобильные устройства (до 576px) */
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 2.5rem; /* Уменьшаем размер заголовка */
+  }
+
+  .stat-number {
+    font-size: 2rem; /* Уменьшаем размер чисел */
+  }
+
+  .services-grid,
+  .support-grid {
+    grid-template-columns: 1fr; /* 1 колонка на очень маленьких экранах */
+  }
+
+  .services-section h2 {
+    font-size: 1.8rem; /* Уменьшаем размер заголовка услуг */
+  }
+
+  .expertise-section h2 {
+    font-size: 2rem; /* Уменьшаем размер заголовка экспертизы */
+  }
+
+  .expertise-image img {
+    transform: translateY(0); /* Сбрасываем трансформацию */
+  }
+}
+
+/* === МОБИЛЬНОЕ МЕНЮ === */
+
+.mobile-menu-toggle {
+  display: none; /* Скрыт по умолчанию (показывается только на мобильных) */
+  flex-direction: column; /* Вертикальное расположение линий гамбургера */
+  background: none; /* Прозрачный фон */
+  border: none; /* Без рамки */
+  cursor: pointer; /* Курсор-указатель */
+  padding: 0.5rem; /* Внутренние отступы */
+  z-index: 101; /* Выше других элементов */
+}
+
+.mobile-menu-toggle .hamburger-line {
+  width: 25px; /* Ширина линии */
+  height: 3px; /* Высота линии */
+  background-color: white; /* Белый цвет */
+  margin: 2px; /* Отступ между линиями */
+  transition: all 0.3s ease; /* Плавная анимация всех свойств */
+}
+
+
+.mobile-nav-menu {
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0; /* Прижато к верху */
+  left: -100%; /* Скрыто за левым краем экрана */
+  width: 100%; /* Ширина 100% окна */
+  height: 100vh; /* Высота 100% окна */
+  background: #0f0c13; /* Темный фон */
+  z-index: 999; /* Очень высокий z-index */
+  overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+  transition: left 0.3s ease; /* Плавная анимация сдвига */
+  padding: 2rem 1rem; /* Внутренние отступы */
+  box-sizing: border-box; /* Размеры включают padding */
+}
+
+.mobile-nav-menu.active {
+  left: 0; /* Показываем меню, сдвигая на 0 */
+}
+
+.mobile-nav-menu ul {
+  list-style: none; /* Убираем стандартные маркеры списка */
+  padding: 0; /* Убираем внутренние отступы */
+  margin: 0; /* Убираем внешние отступы */
+}
+
+.mobile-nav-menu li {
+  margin-bottom: 1rem; /* Отступ снизу между пунктами */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная разделительная линия */
+}
+
+.mobile-nav-menu a,
+.mobile-nav-menu button {
+  color: white; /* Белый цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 1rem; /* Размер шрифта */
+  font-weight: 500; /* Среднее начертание */
+  padding: 0.75rem 1rem; /* Внутренние отступы */
+  display: block; /* Блочный элемент */
+  width: 100%; /* Ширина 100% родителя */
+  text-align: left; /* Выравнивание текста по левому краю */
+  background: transparent; /* Прозрачный фон */
+  border: none; /* Без рамки */
+  cursor: pointer; /* Курсор-указатель */
+  transition: background 0.2s; /* Плавная анимация фона */
+}
+
+.mobile-nav-menu a:hover,
+.mobile-nav-menu button:hover {
+  background: rgba(255, 255, 255, 0.05); /* Слегка белый фон при наведении */
+}
+
+.mobile-nav-menu a.active {
+  color: #ff6b6b; /* Красный цвет для активной ссылки */
+}
+
+.dropdown-submenu {
+  display: none; /* Скрыто по умолчанию */
+  padding-left: 1rem; /* Отступ слева для вложенности */
+  margin-top: 0.5rem; /* Отступ сверху */
+}
+
+.dropdown-submenu.active {
+  display: block; /* Показываем при активации */
+}
+
+.dropdown-toggle {
+  display: flex; /* Flexbox для расположения текста и стрелки */
+  justify-content: space-between; /* Текст слева, стрелка справа */
+  align-items: center; /* Выравнивание по вертикали по центру */
+  width: 100%; /* Ширина 100% родителя */
+  padding-right: 1rem; /* Отступ справа для стрелки */
+  font-weight: bold; /* Жирное начертание */
+  color: white; /* Белый цвет текста */
+}
+
+.dropdown-toggle::after {
+  content: '▼'; /* Стрелка вниз */
+  font-size: 0.8rem; /* Размер стрелки */
+}
+
+.dropdown-toggle.active::after {
+  content: '▲'; /* Стрелка вверх при активном состоянии */
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* На мобильных скрываем обычное меню и показываем гамбургер */
+  .nav-menu {
+    display: none; /* Скрываем десктопное меню */
+  }
+
+  .mobile-menu-toggle {
+    display: flex; /* Показываем кнопку гамбургер-меню */
+  }
+
+  .top-bar {
+    padding: 1rem; /* Уменьшаем отступы */
+    justify-content: space-between; /* Логотип слева, меню справа */
+  }
+
+  .nav-container {
+    width: 100%; /* Ширина 100% родителя */
+    gap: 0; /* Убираем промежуток между элементами */
+  }
+
+  .logo {
+    font-size: 1rem; /* Уменьшаем размер шрифта логотипа */
+    gap: 0.25rem; /* Уменьшаем промежуток между иконкой и текстом */
+  }
+
+  .main-content {
+    padding: 6rem 1rem 2rem; /* Уменьшаем отступы */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    gap: 2rem; /* Уменьшаем промежуток */
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem; /* Уменьшаем размер заголовка */
+  }
+
+  .hero-text p {
+    font-size: 1rem; /* Уменьшаем размер текста */
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 1rem; /* Уменьшаем промежуток */
+  }
+
+  .stat-number {
+    font-size: 2rem; /* Уменьшаем размер чисел */
+  }
+}
+
+/* Стили для статусных сообщений формы */
+.form-status {
+  padding: 12px; /* Внутренние отступы */
+  margin-bottom: 15px; /* Отступ снизу */
+  border-radius: 4px; /* Скругление углов */
+  text-align: center; /* Центрирование текста */
+  display: none; /* Скрыт по умолчанию */
+  font-weight: 500; /* Среднее начертание */
+  font-size: 0.9rem; /* Размер шрифта */
+}
+
+/* Стили для успешного статуса */
+.form-status.success {
+  background: rgba(46, 204, 113, 0.2); /* Светло-зеленый фон с прозрачностью */
+  border: 1px solid #2ecc71; /* Зеленая рамка */
+  color: #2ecc71; /* Зеленый цвет текста */
+  display: block; /* Показываем */
+}
+
+/* Стили для ошибки */
+.form-status.error {
+  background: rgba(231, 76, 60, 0.2); /* Светло-красный фон с прозрачностью */
+  border: 1px solid #e74c3c; /* Красная рамка */
+  color: #e74c3c; /* Красный цвет текста */
+  display: block; /* Показываем */
+}
+
+/* Стили для информационного статуса */
+.form-status.info {
+  background: rgba(52, 152, 219, 0.2); /* Светло-синий фон с прозрачностью */
+  border: 1px solid #3498db; /* Синяя рамка */
+  color: #3498db; /* Синий цвет текста */
+  display: block; /* Показываем */
+}
+
+/* Стили для отключенной кнопки отправки */
+.form-submit:disabled {
+  background: #999; /* Серый фон */
+  cursor: not-allowed; /* Курсор "недоступно" */
+  opacity: 0.6; /* Полупрозрачность */
+}
